@@ -6,8 +6,15 @@
   <title>Newsletter AIMS - Network Giovani</title>
   <style id="adaptive-layout">/* Adaptive desktop layout; mobile is the inline fallback. */
 @media screen and (min-width:601px) {
+ .brand-wrap { padding:16px 40px 24px !important; }
+ .brand-logo-cell { display:table-cell !important; width:29% !important; padding:0 24px 0 0 !important; }
+ .brand-logo { width:170px !important; height:170px !important; }
+ .brand-title-cell { display:table-cell !important; width:71% !important; padding:8px 0 8px 24px !important; border-left:1px solid #a8ccee !important; }
+ .dynamic-newsletter { font-size:13px !important; text-align:left !important; }
+ .dynamic-aims { font-size:38px !important; text-align:left !important; margin-top:8px !important; }
+
  .container { max-width:760px !important; }
- .main-padding { padding:0 40px 24px !important; }
+ .main-padding { padding:32px 40px 24px !important; }
  .card { padding:24px !important; margin:28px 0 !important; }
  .adaptive-sidebar { display:table-cell !important; }
  .adaptive-sidebar img { width:66px !important; height:66px !important; }
@@ -22,22 +29,57 @@
  .hero-head { padding:20px 24px !important; }
  .hero-title { font-size:28px !important; }
 }
+
+/* Gmail text-colour protection, independent of viewport width.
+   https://emailmatrix.ru/blog/gmail-ios-dark-mode/ */
+u + .email-body .header-ink-navy {
+ background-image:linear-gradient(#0b2c69,#0b2c69);
+ background-clip:text;
+ -webkit-background-clip:text;
+ color:transparent !important;
+}
+u + .email-body .header-ink-purple {
+ background-image:linear-gradient(#6863a8,#6863a8);
+ background-clip:text;
+ -webkit-background-clip:text;
+ color:transparent !important;
+}
+div > u + .email-body .header-ink-navy {
+ background-image:none !important;
+ background-clip:border-box !important;
+ -webkit-background-clip:border-box !important;
+ color:#0b2c69 !important;
+}
+div > u + .email-body .header-ink-purple {
+ background-image:none !important;
+ background-clip:border-box !important;
+ -webkit-background-clip:border-box !important;
+ color:#6863a8 !important;
+}
 </style>
 </head>
-<body style="margin:0; padding:0; background:#f4f8fc; font-family:Arial, Helvetica, sans-serif; color:#1f2937">
+<body class="email-body" style="margin:0; padding:0; background:#f4f8fc; font-family:Arial, Helvetica, sans-serif; color:#1f2937">
   <div class="wrapper" style="width:100%; background:#f4f8fc; padding:0; background-color:#f4f8fc; color:#1f2937" width="100%" bgcolor="#f4f8fc">
     <div class="container" style="width:100%; max-width:680px; margin:0 auto; background:#fff; overflow:hidden; background-color:#fff; color:#1f2937" width="100%" bgcolor="#ffffff">
       
             <!-- Intestazione HTML con logo separato e titolo -->
-      <div class="dynamic-header" aria-label="Intestazione modificabile" style="background:#fff; margin-top:0">
+      <div class="dynamic-header" aria-label="Intestazione modificabile" style="background:#fff; margin-top:0;background-color:#ffffff;background-image:linear-gradient(#ffffff,#ffffff);">
         <img src="https://raw.githubusercontent.com/Elisabettafasiello91/Newsletter/main/aims-newsletter/shared/header-waves.png" width="760" height="76" alt="" style="display:block;width:100%;height:auto;border:0;">
-        <div style="padding:16px 12px 12px;background-color:#ffffff;color:#1f2937;">
-<img src="https://raw.githubusercontent.com/Elisabettafasiello91/Newsletter/main/aims-newsletter/shared/LogoAIMS.jpeg" width="100" alt="AIMS — Accademia Italiana di Medicina del Sonno" style="display:block;width:100px;height:100px;margin:0 auto 12px;border:0;" height="100">
-            <div class="dynamic-newsletter" style="font-family:Georgia,'Times New Roman',serif;font-size:30px;line-height:1.2;font-weight:700;color:#0b2c69;text-align:center;margin:0;">NEWSLETTER</div>
-                <div class="dynamic-aims" style="font-family:Georgia,'Times New Roman',serif;font-size:38px;line-height:1.15;font-weight:700;color:#1f5ca8;text-align:center;margin:4px 0 12px;">Network Giovani AIMS</div>
-              </div
-<!-- I tre box modificabili esistenti vengono mantenuti qui sotto e possono essere modificati -->
-        <div class="email-meta" style="padding:0 16px 24px;text-align:center;">
+        <div class="brand-wrap" style="padding:16px 16px 20px;background-color:#ffffff;color:#1f2937;background-color:#ffffff;background-image:linear-gradient(#ffffff,#ffffff);">
+          <table role="presentation" class="brand-table" width="100%" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;table-layout:fixed;">
+            <tr>
+              <td class="brand-logo-cell" style="display:block;width:100%;padding:0 0 12px;vertical-align:middle;text-align:center;">
+                <img class="brand-logo" src="https://raw.githubusercontent.com/Elisabettafasiello91/Newsletter/main/aims-newsletter/shared/LogoAIMS.jpeg" width="112" height="112" alt="AIMS — Accademia Italiana di Medicina del Sonno" style="display:block;width:112px;height:112px;margin:0 auto;border:0;">
+              </td>
+              <td class="brand-title-cell" style="display:block;width:100%;padding:0;vertical-align:middle;">
+                <div class="dynamic-newsletter" style="font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.5;font-weight:700;letter-spacing:2px;color:#6863a8;text-align:center;margin:0;"><span class="header-ink-purple" style="background-image:linear-gradient(#6863a8,#6863a8);background-clip:text;-webkit-background-clip:text;color:transparent;">NEWSLETTER</span></div>
+                <div class="dynamic-aims" style="font-family:Georgia,serif;font-size:30px;line-height:1.15;font-weight:700;color:#0b2c69;text-align:center;margin:8px 0 0;"><span class="header-ink-navy" style="background-image:linear-gradient(#0b2c69,#0b2c69);background-clip:text;-webkit-background-clip:text;color:transparent;">Network Giovani AIMS</span></div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!-- I tre box modificabili esistenti vengono mantenuti qui sotto e possono essere modificati -->
+        <div class="email-meta" style="padding:0 16px 24px;text-align:center;background-color:#ffffff;background-image:linear-gradient(#ffffff,#ffffff);">
 <div style="display:inline-block;max-width:100%;box-sizing:border-box;padding:10px 12px;margin:4px 3px;background-color:#1f5ca8;color:#ffffff;border-radius:20px;font-family:Georgia,serif;font-size:14px;line-height:1.4;font-weight:700;vertical-align:middle;">
 <img src="https://raw.githubusercontent.com/Elisabettafasiello91/Newsletter/main/aims-newsletter/icons/calendar-days-header.png" width="20" height="20" alt="" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;border:0;"><span style="vertical-align:middle;">09/2026</span>
 </div>
@@ -51,7 +93,7 @@
 </div>
 
 
-      <div class="main-padding" style="padding:0 12px 20px">
+      <div class="main-padding" style="padding:28px 12px 20px">
         <h1 style='font-family:Georgia, "Times New Roman", serif; color:#0b2c69; margin:0; font-weight:700; font-size:26px; line-height:1.25; margin-bottom:12px'>Care colleghe e cari colleghi,</h1>
         <div class="lead-rule" style="width:52px; border-top:4px solid #83bdf3; margin:0 0 20px" width="52"></div>
         <p style="font-size:16px; line-height:1.55; margin:0 0 16px">Siamo felici di presentarvi il primo numero della newsletter dell’Accademia Italiana di Medicina del Sonno a cura del Network Giovani. Questo nuovo spazio è rivolto all’intera comunità dei Soci AIMS, senza distinzione di età o ruolo professionale, con l'obiettivo di offrire contenuti aggiornati e di condividere opportunità, iniziative e approfondimenti di interesse comune.</p>
@@ -231,11 +273,6 @@
             </tr>
 </table>
         </div>
-      </div>
-
-      <div class="footer" style="padding:20px 16px; text-align:center; color:#1f5ca8; font-size:12px; line-height:1.6; letter-spacing:1px; font-style:italic" align="center">
-        <span style="font-style:normal; letter-spacing:0; color:#4b5563; font-size:12px;">Non vuoi più ricevere questa newsletter? <a href="*|UNSUB|*" style="color:#1f5ca8">Disiscriviti</a></span>
-        
       </div>
     </div>
   </div>
