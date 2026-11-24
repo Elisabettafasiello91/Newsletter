@@ -1,0 +1,18 @@
+<svg height="512" viewbox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
+<circle cx="256" cy="256" fill="#E6F0FA" r="240"></circle>
+<!-- impugnatura -->
+<rect fill="#FFFFFF" height="215" rx="42" stroke="#8A97A6" stroke-width="7" width="90" x="250" y="230"></rect>
+<!-- testa -->
+<rect fill="#FFFFFF" height="175" rx="38" stroke="#8A97A6" stroke-width="7" width="160" x="205" y="85"></rect>
+<!-- raccordo testa-impugnatura -->
+<rect fill="#FFFFFF" height="48" width="82" x="254" y="220"></rect>
+<!-- supporto oculare -->
+<path d="M212 118 L150 136 L150 222 L212 240 Z" fill="#FFFFFF" stroke="#8A97A6" stroke-linejoin="round" stroke-width="7"></path>
+<!-- conchiglia oculare -->
+<path d="M152 126 Q100 132 94 179 Q100 226 152 232 Z" fill="#1E242C"></path>
+<!-- schermo con curva del riflesso pupillare -->
+<rect fill="#1F2A37" height="104" rx="10" width="74" x="270" y="112"></rect>
+<path d="M280 140 L293 140 Q298 140 302 188 Q306 197 316 176 Q324 158 336 150" fill="none" stroke="#4FD1C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"></path>
+<!-- pulsante -->
+<rect fill="#2FA84F" height="30" rx="6" width="12" x="243" y="262"></rect>
+</svg>
